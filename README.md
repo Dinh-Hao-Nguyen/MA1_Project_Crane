@@ -69,7 +69,22 @@ To install the HEBI API for MATLAB, please refer to the [official website of HEB
 <!-- DESCRIPTION OF THE MATLAB CODE -->
 ## Description of the MATLAB code
 
-
+* [model_vf1.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/model_vf1.m) computes the Lagrangian of the system, without consideration of the additional counterbalance, as well as the M, C and G matrices describing the dynamic model.
+* [new_modelvf1.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/new_modelvf1.m) computes the Lagrangian of the system, considering the additional counterbalance, as well as the M, C and G matrices describing the dynamic model.
+* [crane.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/crane.m) computes the equations of motion of a boom crane without consideration of the additional counterbalance. This code can be used in the Simulink model.
+* [new_crane.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/new_crane.m) computes the equations of motion of a boom crane considering the additional counterbalance. This code is used in the the Simulink model.
+* [latex.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/model_vf1.m) can be used to convert easily all these equations from MATLAB to LaTeX.
+* [code_Max.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/code_Max.m) is used to send trajectory commands to HEBI's actuators and to collect position measurements from the OptiTrack cameras and feedback torques from the actuators. Then, it computes the 5 generalized coordinates of the system: the slew angle of the base, the luff angle of the boom, the length of the rope, the tangential and radial oscillation angles of the payload.
+* [newREGRESSOR_Y.mat](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/newREGRESSOR_Y.mat) contains the symbolic expression of the regressor matrix Y of the system.
+* [correct_time.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/correct_time.m) defines a function that detects and deals with anormally long time delays. This is needed to better compute the velocities and accelerations.
+* [TIME_DERIVATIVE.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/TIME_DERIVATIVE.m) defines a function that returns the time derivative of a matrix.
+* [correct_data.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/correct_data.m) defines a function that removes undesired peaks before filtering the data.
+* [Matrix_filt.m defines](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/Matrix_filt.m) defines a function used to filter the data.
+* [Ident_model.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/Ident_model.m) linearizes the manipulator dynamic model in the form τ = Y π and computes the π parameter vector solving a least-squares optimization problem with the measured data.
+* [Ident_model_simulink_data](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/Ident_model_simulink_data.m) computes the π parameter vector solving a least-squares optimization problem with the data obtained by simulation.
+* [scheme_sim.slx](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/scheme_sim.slx) contains the Simulink model of a boom crane.
+* [init_smulink.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/init_simulink.m) must be run to initialize some parameters in the Simulink model.
+* [plotFig.m](https://github.com/Dinh-Hao-Nguyen/MA1_Project_Crane/blob/main/MATLAB/plotFig.m) can be used to plot the evolution of the generalized coordinates when a trajectory is sent to the crane.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

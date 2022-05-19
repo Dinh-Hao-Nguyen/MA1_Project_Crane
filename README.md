@@ -69,7 +69,7 @@ To install the HEBI API for MATLAB, please refer to the [official website of HEB
 <!-- DESCRIPTION OF THE MATLAB CODE -->
 ## Description of the MATLAB code
 
-(coming soon)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

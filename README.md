@@ -90,5 +90,7 @@ To install the HEBI API for MATLAB, please refer to the [official website of HEB
 
 * Prof. Emanuele Garone
 * Ir. Michele Ambrosino
+* Christophe Dushimyimana
+* Sabri El Amrani
 
 <p align="right">(<a href="#top">back to top</a>)</p>
